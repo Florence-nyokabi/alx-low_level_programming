@@ -1,13 +1,13 @@
 #include "main.h"
-
 /**
- *print_chessboard - print the chessboard
- *@a: source
+ * print_chessboard - print a chessboard.
+ * @a: source 
  *
- * Return: 0
+ *
+ * Return: chessboard.
  */
- void print_chessboard(char (*a)[8])
- {
+void print_chessboard(char (*a)[8])
+{
 	int i, j;
 
 	for (i = 0; i <= 7; i++)
