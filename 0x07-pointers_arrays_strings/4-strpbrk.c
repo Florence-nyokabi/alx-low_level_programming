@@ -1,11 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _strpbrk - searches a string for any set of bytes
- *@s: source string
- *@accept: searching string
+ * _strpbrk - prints the consecutive caracters of s1 that are in s2.
+ * @s: source string
+ * @accept: searching string
  *
- * Return: new string
+ * Return: new string.
  */
 char *_strpbrk(char *s, char *accept)
 {
@@ -15,7 +15,7 @@ char *_strpbrk(char *s, char *accept)
 	{
 		for (j = 0; *(accept + j); j++)
 		{
-			if(*(s + i) == *(accept + j))
+			if (*(s + i) == *(accept + j))
 			{
 				break;
 			}
