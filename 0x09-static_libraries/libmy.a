@@ -1,0 +1,3 @@
+#!/bin/bash
+ar -t libmy.a
+nm libmy.a
