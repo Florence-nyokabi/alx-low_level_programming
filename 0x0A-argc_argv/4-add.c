@@ -5,7 +5,7 @@
 #include "main.h"
 
 /**
- * Program that takes in all integer arguments and returns the sum
+ * main - Program that takes in all integer arguments and returns the sum
  * @argc: Number of command line arguments
  * @argv: Array name
  * Return: 1 if a non-integer is among the passed in arguments, 0 otherwise
