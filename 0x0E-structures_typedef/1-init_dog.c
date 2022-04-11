@@ -8,7 +8,11 @@
  * @name: name of dog.
  * @age: age of dog.
  * @owner: owner of dog.
+<<<<<<< HEAD
   */
+=======
+ */
+>>>>>>> d18ec9884d3d446cd4afd52f869baf84fefbd13f
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
