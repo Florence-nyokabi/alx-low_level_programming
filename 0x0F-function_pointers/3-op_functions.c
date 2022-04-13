@@ -52,6 +52,7 @@ int op_div(int a, int b)
 	return (a / b);
 }
 
+
 /**
  * op_mod - modulo operation
  * @a: first term
