@@ -2,14 +2,14 @@
 #include "3-calc.h"
 
 /**
- * get_op_func - a  function that selects the correct function to perform the
- * operation asked by the user. You’re not allowed to declare any other
- * function
- * @s: operator passed as argument to the program
- *
- * Return: a pointer to the function that corresponds to the operator given as a
- * parameter
- */
+* get_op_func - a  function that selects the correct function to perform the
+* operation asked by the user. You’re not allowed to declare any other
+* function
+* @s: operator passed as argument to the program
+*
+* Return: a pointer to the function that corresponds to the operator given as a
+* parameter
+*/
 
 int (*get_op_func(char *s))(int, int)
 {
@@ -23,6 +23,7 @@ op_t ops[] = {
 	};
 
 	int i;
+
 	i = 0;
 	while (ops[i].op)
 	{
@@ -30,7 +31,6 @@ op_t ops[] = {
 		{
 			return (ops[i].f);
 		}
-
 	     i++;
 	}
 
