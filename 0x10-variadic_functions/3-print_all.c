@@ -49,5 +49,6 @@ void print_all(const char * const format, ...)
 				break;
 		}counter++;
 	}
-	printf("\n"), va_end(myList);
+	printf("\n");
+	va_end(myList);
 }
