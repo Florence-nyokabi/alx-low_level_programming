@@ -40,6 +40,7 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				p = va_arg(myList, char *), i = 1;
+				
 				if (!p)
 				{
 					printf("(nil)");
