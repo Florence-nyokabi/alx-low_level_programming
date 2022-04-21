@@ -1,7 +1,7 @@
-#include "main.h"
+#include "lists.h"
 
 /**
- *_putchar - prints a character
+ * _putchar - prints a character
  * @c: character to be printed
  *
  * Return: On success 1, on fail -1
