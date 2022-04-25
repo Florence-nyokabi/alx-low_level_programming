@@ -28,7 +28,7 @@
 
 
 
-0. Print list
+##  **0. Print list**
 
 
 Write a function that prints all the elements of a listint_t list.
@@ -40,7 +40,7 @@ You are allowed to use printf
 
 
 
-**1. List length**
+## **1. List length**
 
 
 
@@ -52,7 +52,7 @@ Prototype: size_t listint_len(const listint_t *h);
 
 
 
-**2. Add node**
+## **2. Add node**
 
 
 
@@ -67,7 +67,7 @@ Return: the address of the new element, or NULL if it failed
 
 
 
-**3. Add node at the end**
+## **3. Add node at the end**
 
 
 Write a function that adds a new node at the end of a listint_t list.
@@ -82,7 +82,7 @@ Return: the address of the new element, or NULL if it failed
 
 
 
-**4. Free list**
+## **4. Free list**
 
 
 
@@ -96,7 +96,7 @@ Prototype: void free_listint(listint_t *head);
 
 
 
-**5. Free**
+## **5. Free**
 
 
 
@@ -113,7 +113,7 @@ The function sets the head to NULL
 
 
 
-**6. Pop**
+## **6. Pop**
 
 
 
@@ -133,7 +133,7 @@ if the linked list is empty return 0
 
 
 
-**7. Get node at index**
+## **7. Get node at index**
 
 
 
@@ -159,7 +159,7 @@ if the node does not exist, return NULL
 
 
 
-**8. Sum list**
+## **8. Sum list**
 
 
 
@@ -176,7 +176,7 @@ if the list is empty, return 0
 
 
 
-**9. Insert**
+## **9. Insert**
 
 
 
@@ -201,7 +201,7 @@ if it is not possible to add the new node at index idx, do not add the new node 
 
 
 
-**10. Delete at index**
+## **10. Delete at index**
 
 
 
@@ -222,7 +222,7 @@ Returns: 1 if it succeeded, -1 if it failed
 
 
 
-**11. Reverse list**
+## **11. Reverse list**
 
 
 
@@ -251,7 +251,7 @@ You can only declare a maximum of two variables in your function
 
 
 
-**12. Print (safe version)**
+## **12. Print (safe version)**
 
 
 Write a function that prints a listint_t linked list.
@@ -283,7 +283,7 @@ Output format: see example
 
 
 
-**13. Free (safe version)**
+## **13. Free (safe version)**
 
 
 
@@ -312,7 +312,7 @@ The function sets the head to NULL
 
 
 
-**14. Find the loop**
+## **14. Find the loop**
 
 
 
