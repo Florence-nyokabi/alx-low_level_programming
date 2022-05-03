@@ -28,8 +28,6 @@ void get_type(Elf64_Ehdr *ehdr)
 	}
 }
 
-
-
 /**
  * main - entry point for program to get header of ELF file
  * @argc: arg of count
