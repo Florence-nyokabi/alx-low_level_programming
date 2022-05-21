@@ -110,7 +110,9 @@ Don’t forget to push your main.h file to your repository. It should at least c
 **Repo:**
 
 GitHub repository: alx-low_level_programming
+
 Directory: 0x09-static_libraries
+
 File: libmy.a, main.h
 
 
@@ -122,5 +124,7 @@ Create a script called create_static_lib.sh that creates a static library called
 **Repo:**
 
 GitHub repository: alx-low_level_programming
+
 Directory: 0x09-static_libraries
+
 File: create_static_lib.sh
