@@ -147,7 +147,9 @@ Prototype: void free_grid(int **grid, int height);
 Note that we will compile with your alloc_grid.c file. Make sure it compiles.
 
 
-5. It isn't the mountains ahead to climb that wear you out; it's the pebble in your shoe
+
+## 5. It isn't the mountains ahead to climb that wear you out; it's the pebble in your shoe
+
 #advanced
 
 Write a function that concatenates all the arguments of your program.
@@ -163,7 +165,8 @@ Each argument should be followed by a \n in the new string
 
 
      
-6. I will show you how great I am
+## 6. I will show you how great I am
+
 #advanced
 
 Write a function that splits a string into words.
