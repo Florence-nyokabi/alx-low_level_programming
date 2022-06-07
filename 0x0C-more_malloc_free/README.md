@@ -1,40 +1,33 @@
-# 0x0B. C - malloc, free
- By Julien Barbier
- Weight: 1
- Project over - took place from Apr 4, 2022 to Apr 6, 2022 -
- 
+# 0x0C. C - More malloc, free
+
 #### Concepts
 For this project, we expect you to look at this concept:
 
 Automatic and dynamic allocation, malloc and free
 
-##### Resources
+Resources
 
-###### Read or watch:
+Read or watch:
 
-0x0a - malloc & free - quick overview.pdf
-
-Dynamic memory allocation in C - malloc calloc realloc free (stop at 6:50)
-
+Do I cast the result of malloc?
 man or help:
 
-malloc
+exit (3)
 
-free
+calloc
+
+realloc
+
 
 # Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
 ## General
-What is the difference between automatic and dynamic allocation
+How to use the exit function
 
-What is malloc and free and how to use them
+What are the functions calloc and realloc from the standard library and how to use them
 
-Why and when use malloc
-
-How to use valgrind to check for memory leak
-
-#### Copyright - Plagiarism
+### Copyright - Plagiarism
 You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
 
 You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
@@ -59,127 +52,130 @@ You are not allowed to use global variables
 
 No more than 5 functions per file
 
-The only C standard library functions allowed are malloc and free. Any use of functions like printf, puts, calloc, realloc etc… is forbidden
+The only C standard library functions allowed are malloc, free and exit. Any use of functions like printf, puts, calloc, realloc etc… is forbidden
 
 You are allowed to use _putchar
 
 You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
 
 In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do 
-
 we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
 
 The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called main.h
 
 Don’t forget to push your header file
 
-## More Info
-You do not have to learn about calloc and realloc.
-
 
 # Tasks
-## 0. Float like a butterfly, sting like a bee
+## 0. Trust no one
+*mandatory*
 
-**mandatory**
+Write a function that allocates memory using malloc.
 
-Write a function that creates an array of chars, and initializes it with a specific char.
+**Prototype:** void *malloc_checked(unsigned int b);
 
-*Prototype:* char *create_array(unsigned int size, char c);
+Returns a pointer to the allocated memory
 
-
-## 1. The woman who has no imagination has no wings
-
-**mandatory**
-
-Write a function that returns a pointer to a newly allocated space in memory, which contains a copy of the string given as a parameter.
-
-*Prototype:* char *_strdup(char *str);
-
-The _strdup() function returns a pointer to a new string which is a duplicate of the string str. Memory for the new string is obtained with malloc, and can be freed with free.
-
-Returns NULL if str = NULL
-
-On success, the _strdup function returns a pointer to the duplicated string. It returns NULL if insufficient memory was available
-
-FYI: The standard library provides a similar function: strdup. Run man strdup to learn more.
+if malloc fails, the malloc_checked function should cause normal process termination with a status value of 98
 
 
-## 2. He who is not courageous enough to take risks will accomplish nothing in life
-
-**mandatory**
+   
+## 1. string_nconcat
+*mandatory*
 
 Write a function that concatenates two strings.
 
-*Prototype:* char *str_concat(char *s1, char *s2);
+**Prototype:** char *string_nconcat(char *s1, char *s2, unsigned int n);
 
-The returned pointer should point to a newly allocated space in memory which contains the contents of s1, followed by the contents of s2, and null terminated
+The returned pointer shall point to a newly allocated space in memory, which contains s1, followed by the first n bytes of s2, and null terminated
+
+If the function fails, it should return NULL
+
+If n is greater or equal to the length of s2 then use the entire string s2
 
 if NULL is passed, treat it as an empty string
 
-The function should return NULL on failure
+
+   
+## 2. _calloc
+*mandatory*
+
+Write a function that allocates memory for an array, using malloc.
+
+**Prototype:** void *_calloc(unsigned int nmemb, unsigned int size);
+
+The _calloc function allocates memory for an array of nmemb elements of size bytes each and returns a pointer to the allocated memory.
+
+The memory is set to zero
+
+If nmemb or size is 0, then _calloc returns NULL
+
+If malloc fails, then _calloc returns NULL
+
+FYI: The standard library provides a different function: calloc. Run man calloc to learn more.
 
 
-     
-## 3. If you even dream of beating me you'd better wake up and apologize
+    
+## 3. array_range
+*mandatory*
 
-**mandatory**
+Write a function that creates an array of integers.
 
-Write a function that returns a pointer to a 2 dimensional array of integers.
+**Prototype:** int *array_range(int min, int max);
 
-*Prototype:* int **alloc_grid(int width, int height);
+The array created should contain all the values from min (included) to max (included), ordered from min to max
 
-Each element of the grid should be initialized to 0
+Return: the pointer to the newly created array
 
-The function should return NULL on failure
+If min > max, return NULL
 
-If width or height is 0 or negative, return NULL
-
-
-     
-## 4. It's not bragging if you can back it up
-**mandatory**
-
-Write a function that frees a 2 dimensional grid previously created by your alloc_grid function.
-
-*Prototype:* void free_grid(int **grid, int height);
-
-Note that we will compile with your alloc_grid.c file. Make sure it compiles.
+If malloc fails, return NULL
 
 
+## 4. _realloc
+*#advanced*
 
-## 5. It isn't the mountains ahead to climb that wear you out; it's the pebble in your shoe
+Write a function that reallocates a memory block using malloc and free
 
-**#advanced**
+**Prototype:** void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
-Write a function that concatenates all the arguments of your program.
+where ptr is a pointer to the memory previously allocated with a call to malloc: malloc(old_size)
 
-*Prototype:* char *argstostr(int ac, char **av);
+old_size is the size, in bytes, of the allocated space for ptr
 
-Returns NULL if ac == 0 or av == NULL
+and new_size is the new size, in bytes of the new memory block
 
-Returns a pointer to a new string, or NULL if it fails
+The contents will be copied to the newly allocated space, in the range from the start of ptr up to the minimum of the old and new sizes
 
-Each argument should be followed by a \n in the new string
+If new_size > old_size, the “added” memory should not be initialized
+
+If new_size == old_size do not do anything and return ptr
+
+If ptr is NULL, then the call is equivalent to malloc(new_size), for all values of old_size and new_size
+
+If new_size is equal to zero, and ptr is not NULL, then the call is equivalent to free(ptr). Return NULL
+
+Don’t forget to free ptr when it makes sense
+
+FYI: The standard library provides a different function: realloc. Run man realloc to learn more.
 
 
+## 5. We must accept finite disappointment, but never lose infinite hope
+*#advanced*
 
-     
-## 6. I will show you how great I am
+Write a program that multiplies two positive numbers.
 
-**#advanced**
+**Usage:** mul num1 num2
 
-Write a function that splits a string into words.
+num1 and num2 will be passed in base 10
 
-*Prototype:* char **strtow(char *str);
+Print the result, followed by a new line
 
-The function returns a pointer to an array of strings (words)
+If the number of arguments is incorrect, print Error, followed by a new line, and exit with a status of 98
 
-Each element of this array should contain a single word, null-terminated
+num1 and num2 should only be composed of digits. If not, print Error, followed by a new line, and exit with a status of 98
 
-The last element of the returned array should be NULL
+You are allowed to use more than 5 functions in your file
 
-Words are separated by spaces
+You can use bc (man bc) to check your results.
 
-Returns NULL if str == NULL or str == ""
-
-If your function fails, it should return NULL
