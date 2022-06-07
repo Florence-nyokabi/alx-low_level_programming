@@ -8,9 +8,9 @@ For this project, we expect you to look at this concept:
 
 Automatic and dynamic allocation, malloc and free
 
-Resources
+##### Resources
 
-Read or watch:
+###### Read or watch:
 
 0x0a - malloc & free - quick overview.pdf
 
@@ -32,10 +32,9 @@ What is malloc and free and how to use them
 
 Why and when use malloc
 
-
 How to use valgrind to check for memory leak
 
-# Copyright - Plagiarism
+#### Copyright - Plagiarism
 You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
 
 You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
@@ -44,8 +43,8 @@ You are not allowed to publish any content of this project.
 
 Any form of plagiarism is strictly forbidden and will result in removal from the program.
 
-### Requirements
-## General
+## Requirements
+### General
 Allowed editors: vi, vim, emacs
 
 All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
@@ -81,20 +80,20 @@ You do not have to learn about calloc and realloc.
 # Tasks
 ## 0. Float like a butterfly, sting like a bee
 
-mandatory
+**mandatory**
 
 Write a function that creates an array of chars, and initializes it with a specific char.
 
-Prototype: char *create_array(unsigned int size, char c);
+*Prototype:* char *create_array(unsigned int size, char c);
 
 
 ## 1. The woman who has no imagination has no wings
 
-mandatory
+**mandatory**
 
 Write a function that returns a pointer to a newly allocated space in memory, which contains a copy of the string given as a parameter.
 
-Prototype: char *_strdup(char *str);
+*Prototype:* char *_strdup(char *str);
 
 The _strdup() function returns a pointer to a new string which is a duplicate of the string str. Memory for the new string is obtained with malloc, and can be freed with free.
 
@@ -107,11 +106,11 @@ FYI: The standard library provides a similar function: strdup. Run man strdup to
 
 ## 2. He who is not courageous enough to take risks will accomplish nothing in life
 
-mandatory
+**mandatory**
 
 Write a function that concatenates two strings.
 
-Prototype: char *str_concat(char *s1, char *s2);
+*Prototype:* char *str_concat(char *s1, char *s2);
 
 The returned pointer should point to a newly allocated space in memory which contains the contents of s1, followed by the contents of s2, and null terminated
 
@@ -123,11 +122,11 @@ The function should return NULL on failure
      
 ## 3. If you even dream of beating me you'd better wake up and apologize
 
-mandatory
+**mandatory**
 
 Write a function that returns a pointer to a 2 dimensional array of integers.
 
-Prototype: int **alloc_grid(int width, int height);
+*Prototype:* int **alloc_grid(int width, int height);
 
 Each element of the grid should be initialized to 0
 
@@ -138,11 +137,11 @@ If width or height is 0 or negative, return NULL
 
      
 ## 4. It's not bragging if you can back it up
-mandatory
+**mandatory**
 
 Write a function that frees a 2 dimensional grid previously created by your alloc_grid function.
 
-Prototype: void free_grid(int **grid, int height);
+*Prototype:* void free_grid(int **grid, int height);
 
 Note that we will compile with your alloc_grid.c file. Make sure it compiles.
 
@@ -150,11 +149,11 @@ Note that we will compile with your alloc_grid.c file. Make sure it compiles.
 
 ## 5. It isn't the mountains ahead to climb that wear you out; it's the pebble in your shoe
 
-#advanced
+**#advanced**
 
 Write a function that concatenates all the arguments of your program.
 
-Prototype: char *argstostr(int ac, char **av);
+*Prototype:* char *argstostr(int ac, char **av);
 
 Returns NULL if ac == 0 or av == NULL
 
@@ -167,11 +166,11 @@ Each argument should be followed by a \n in the new string
      
 ## 6. I will show you how great I am
 
-#advanced
+**#advanced**
 
 Write a function that splits a string into words.
 
-Prototype: char **strtow(char *str);
+*Prototype:* char **strtow(char *str);
 
 The function returns a pointer to an array of strings (words)
 
