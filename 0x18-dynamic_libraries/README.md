@@ -103,7 +103,9 @@ Create a dynamic library that contains C functions that can be called from Pytho
 
 
 
-I bought a ticket for the Giga Millions and chose these numbers: 9, 8, 10, 24, 75 + 9. If you could run two commands on the same server where the Giga Millions program runs, could you make me win the Jackpot?
+I bought a ticket for the Giga Millions and chose these numbers: 9, 8, 10, 24, 75 + 9. If you could run two commands on the same server where the Giga Millions 
+
+program runs, could you make me win the Jackpot?
 
 Our mole got us a copy of the program, you can download it here. Our mole also gave us a piece of documentation:
 
@@ -124,7 +126,7 @@ The server has internet access
 
 Our mole will be only able to run two commands from a shell script, without being detected by MSS
 
-Your shell script should be maximum 3 lines long. You are not allowed to use ;, &&, ||, |, ` (it would be detected by MSS), and have a maximum of two commands
+Your shell script should be maximum 3 lines long. You are not allowed to use ;, &&, ||, |, (it would be detected by MSS), and have a maximum of two commands
 
 Our mole has only the authorization to upload one file on the server. It will be your shell script
 
