@@ -6,7 +6,7 @@
 /**
  * linear_search -searches for a value in an array of integers 
  * using the Linear search algorithm.
- *@array: array to search the value in
+ * @rray: array to search the value in
  * @size: size of the array
  * @value: value
  *
