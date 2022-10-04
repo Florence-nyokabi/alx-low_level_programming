@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 #ifndef _SEARCH_ALGOS_H_
 #define _SEARCH_ALGOS_H_
 
@@ -57,4 +54,3 @@ void print_list(const listint_t *list);
 skiplist_t *linear_skip(skiplist_t *list, int value);
 
 #endif
->>>>>>> refs/remotes/origin/master
