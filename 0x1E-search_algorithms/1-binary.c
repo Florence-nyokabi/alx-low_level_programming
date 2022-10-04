@@ -6,7 +6,8 @@
 /**
  * binary_search - searches for a value in an array of
  * integers using the Binary search algorithm
- * @array: array to search the value
+ * @array: array to search the value in
+ * @size: size of the array
  * @value: value to look for
  *
  * Return: the index of the found value,
